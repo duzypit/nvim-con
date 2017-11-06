@@ -2,18 +2,20 @@ call plug#begin('~/.vim/plugged')
 
 
 Plug 'scrooloose/nerdtree'				" nerdtree https://github.com/scrooloose/nerdtree
-Plug 'thirtythreeforty/lessspace.vim'	" strip the trailing whitespace from the file you are editing
-Plug 'Valloric/YouCompleteMe'			" fast, as-you-type, fuzzy-search code completion engine
+Plug 'thirtythreeforty/lessspace.vim'			" strip the trailing whitespace from the file you are editing
+Plug 'Valloric/YouCompleteMe'				" fast, as-you-type, fuzzy-search code completion engine
 Plug 'benekastah/neomake'				" plugin to asynchronously run programs
-Plug 'Raimondi/delimitMate'				" automatic closing of quotes, parenthesis, brackets, etc.
+"Plug 'Raimondi/delimitMate'				" automatic closing of quotes, parenthesis, brackets, etc.
 
 " color schemes"
 Plug 'iCyMind/NeoSolarized'				" Colorscheme for Vim
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'vim-airline/vim-airline'				" statusbar below text window
 Plug 'vim-airline/vim-airline-themes'
-Plug 'tpope/vim-fugitive'				"git wrapper"
-call plug#end() 						" Initialize plugin system
+Plug 'tpope/vim-fugitive'				"git wrapper
+Plug 'godlygeek/tabular'
+Plug 'plasticboy/vim-markdown'
+call plug#end() 					" Initialize plugin system
 
 "----------------------------------------------
 " General settings
@@ -32,10 +34,26 @@ set cursorline                    " highlight the current line for the cursor
 set title                         " let vim set the terminal title
 set updatetime=100                " redraw the status bar often
 set ruler
+set foldenable				"enable folding
+
+"set proper tabs
+set tabstop=4
+set shiftwidth=4
+set smarttab
+set expandtab
+
+"----------------------------------------------
+" Plugin: vim-markdown
+"----------------------------------------------
+let g:vim_markdown_folding_style_pythonic = 1
+
 "----------------------------------------------
 " Plugin: vim-airline/vim-airline
 "----------------------------------------------
 let g:airline#extensions#tabline#enabled = 1
+let g:airline_powerline_fonts = 1
+let g:airline_powerline_symbols = 1
+
 
 "----------------------------------------------
 " Plugin: 'Valloric/YouCompleteMe
@@ -47,7 +65,7 @@ au FileType c,cpp nnoremap <buffer> <c-]> :YcmCompleter GoTo<CR>			"ycm key bind
 " Plugin: 'scrooloose/nerdtree'
 "----------------------------------------------
 map <F2> :NERDTreeToggle<CR>												" Give a shortcut key to NERD Tree
-
+let NERDTreeQuitOnOpen = 1
 "----------------------------------------------
 " neovim specific settings
 "----------------------------------------------
