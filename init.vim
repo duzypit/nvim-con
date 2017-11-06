@@ -10,8 +10,9 @@ Plug 'Raimondi/delimitMate'				" automatic closing of quotes, parenthesis, brack
 " color schemes"
 Plug 'iCyMind/NeoSolarized'				" Colorscheme for Vim
 Plug 'NLKNguyen/papercolor-theme'
-
-
+Plug 'vim-airline/vim-airline'				" statusbar below text window
+Plug 'vim-airline/vim-airline-themes'
+Plug 'tpope/vim-fugitive'				"git wrapper"
 call plug#end() 						" Initialize plugin system
 
 "----------------------------------------------
@@ -26,12 +27,15 @@ set smartindent                   	" enable smart indentation
 set autoread                      	" reload file if the file changes on the disk
 set autowrite                     	" write when switching buffers
 set autowriteall                  	" write on :quit
-set colorcolumn=81                " highlight the 80th column as an indicator
 set completeopt-=preview          " remove the horrendous preview window
 set cursorline                    " highlight the current line for the cursor
 set title                         " let vim set the terminal title
 set updatetime=100                " redraw the status bar often
 set ruler
+"----------------------------------------------
+" Plugin: vim-airline/vim-airline
+"----------------------------------------------
+let g:airline#extensions#tabline#enabled = 1
 
 "----------------------------------------------
 " Plugin: 'Valloric/YouCompleteMe
