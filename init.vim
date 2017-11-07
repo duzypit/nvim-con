@@ -5,7 +5,7 @@ Plug 'scrooloose/nerdtree'				" nerdtree https://github.com/scrooloose/nerdtree
 Plug 'thirtythreeforty/lessspace.vim'			" strip the trailing whitespace from the file you are editing
 Plug 'Valloric/YouCompleteMe'				" fast, as-you-type, fuzzy-search code completion engine
 Plug 'benekastah/neomake'				" plugin to asynchronously run programs
-"Plug 'Raimondi/delimitMate'				" automatic closing of quotes, parenthesis, brackets, etc.
+Plug 'Raimondi/delimitMate'				" automatic closing of quotes, parenthesis, brackets, etc.
 
 " color schemes"
 Plug 'iCyMind/NeoSolarized'				" Colorscheme for Vim
@@ -15,6 +15,8 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-fugitive'				"git wrapper
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
+"Plug 'scrooloose/nerdcommenter'
+
 call plug#end() 					" Initialize plugin system
 
 "----------------------------------------------
